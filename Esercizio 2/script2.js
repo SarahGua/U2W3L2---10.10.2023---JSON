@@ -1,6 +1,6 @@
 let counter = 0
 
-const timerHtml = document.getElementById('timer')
+const initialTimer = document.getElementById('timer')
 
 const sessioneTimer = 'Local Timer'
 
@@ -9,7 +9,7 @@ const timer = function(){
     const hour = Math.floor(counter / 3600)
     const minute = Math.floor((counter - hour * 3600)/ 60)
     const second = counter - (hour * 3600 + minute * 60)
-    timerHtml.innerHTML = `${hour}:${minute}:${second}`
+    initialTimer.innerHTML = `${hour}:${minute}:${second}`
     sessionStorage.setItem(sessioneTimer, counter)  
 }
 
